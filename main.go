@@ -26,7 +26,6 @@ func main() {
 
 	for i:=1; i<10; i++ {
 		go createDomain(y, m, d, i,"Chelsea", "com")
-		
 		domain := <-ch
 		fmt.Println(domain)
 	}
