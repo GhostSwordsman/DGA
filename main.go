@@ -10,7 +10,6 @@ import (
 
 var ch = make(chan string)
 
-
 func createDomain(year, month, day, count int, secret string, tld string) {
 	if !strings.HasPrefix(tld, ".") {
 		tld = "." + tld
@@ -21,14 +20,13 @@ func createDomain(year, month, day, count int, secret string, tld string) {
 	ch <- domain
 }
 
-
 func main() {
 	t := time.Now()
 	y, m, d := t.Year(), int(t.Month()), t.Day()
 
 	for i:=1; i<10; i++ {
 		go createDomain(y, m, d, i,"Chelsea", "com")
-
+		
 		domain := <-ch
 		fmt.Println(domain)
 	}
