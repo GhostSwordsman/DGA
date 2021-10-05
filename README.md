@@ -1,6 +1,6 @@
 # DGA
 
-根据日期及Secret&Count参数生成md5后的域名，仅供合法使用
+根据日期及Secret&Count参数生成md5后的域名
 
 # 使用
 ```
