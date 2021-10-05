@@ -10,7 +10,7 @@ import (
 
 var ch = make(chan string)
 
-func createDomain(year, month, day, count int, secret string, tld string) {
+func createDomain(year, month, day, count int, secret, tld string) {
 	if !strings.HasPrefix(tld, ".") {
 		tld = "." + tld
 	}
